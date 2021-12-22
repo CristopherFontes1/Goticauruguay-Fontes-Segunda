@@ -6,6 +6,7 @@ import { CarritoComponent } from './Components/carrito/carrito.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { InfoComponent } from './Components/info/info.component'
 import { LayoutComponent } from './Components/layout/layout.component';
+import { AdminGuard } from './admin.guard';
 
 
 
@@ -38,6 +39,7 @@ const routes: Routes = [
       },
       {
         path: 'carrito',
+        canActivate: [AdminGuard],
         component: CarritoComponent
       },
     ]
