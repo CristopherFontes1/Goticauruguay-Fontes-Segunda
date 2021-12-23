@@ -10,7 +10,8 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { LayoutComponent } from './Components/layout/layout.component';
 import {SharedModule} from './Components/shared/shared.module'
 import {CoreModule} from './Components/core/core.module'
-import {ProductsModule} from './Components/products/products.module'
+import {ProductsModule} from './Components/products/products.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {ProductsModule} from './Components/products/products.module'
     SharedModule,
     CoreModule,
     ReactiveFormsModule,
-    ProductsModule
+    ProductsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
