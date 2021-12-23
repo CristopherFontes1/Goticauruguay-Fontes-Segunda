@@ -1,6 +1,6 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
-import { Product } from '../../../listado/product.model';
+import { Product } from '../../../products/listado/product.model';
 
 
 @Injectable({

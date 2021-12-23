@@ -1,10 +1,10 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
-import {ListadoComponent} from './Components/listado/listado.component';
+import {ListadoComponent} from './Components/products/listado/listado.component';
 import { LoginComponent } from './Components/login/login.component';
 import { CarritoComponent } from './Components/carrito/carrito.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
-import { InfoComponent } from './Components/info/info.component'
+import { InfoComponent } from './Components/products/info/info.component'
 import { LayoutComponent } from './Components/layout/layout.component';
 import { AdminGuard } from './admin.guard';
 
@@ -21,7 +21,7 @@ const routes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full',
       },
-      {
+      { 
         path: 'home',
         loadChildren: () => import('./Components/home/home.module').then(m => m.HomeModule)
       },
@@ -31,11 +31,7 @@ const routes: Routes = [
       },
       {
         path: 'listado',
-        component: ListadoComponent
-      },
-      {
-        path: 'listado/:id',
-        component: InfoComponent
+        loadChildren: () => import ('./Components/products/products.module').then (m => m.ProductsModule)
       },
       {
         path: 'carrito',
