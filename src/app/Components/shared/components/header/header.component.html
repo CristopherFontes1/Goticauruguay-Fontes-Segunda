@@ -1,23 +1,18 @@
-<body>  
-  <header>
-      <div class="contenedor">
-        <h2 class="logotipo">Gotica Movie</h2>
-        <nav>
-          <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active" routerLink="/listado">Peliculas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active" routerLink="/carrito">Carrito</a>
-              </li>   
-              <li class="nav-item" >
-                  <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-  </header>
-</body>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="row between-xs middle-xs header-row">
+    <nav>        
+        <a mat-button  routerLinkActive="active" aria-current="page" routerLink="/home">Home</a>
+        <a mat-button  routerLinkActive="active" routerLink="/listado">Peliculas</a>
+        <a mat-button  routerLinkActive="active" routerLink="/login">Login</a>
+    </nav>
+ 
+    <a mat-raised-button matBadge="4" matBadgeColor="warn" routerLinkActive="active" routerLink="/carrito">
+      <mat-icon >shopping_cart</mat-icon>
+      Carrito
+    </a>
+  </div>  
+   
+</mat-toolbar-row>
+</mat-toolbar>
+

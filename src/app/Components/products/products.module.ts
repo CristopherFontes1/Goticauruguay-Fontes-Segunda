@@ -4,6 +4,7 @@ import { ListadoComponent } from './listado/listado.component';
 import { InfoComponent } from './info/info.component';
 import {ProductsRoutingModule} from './products-routing.module'
 import {SharedModule} from '../shared/shared.module'
+import {MaterialModule} from '../material/material.module'
 
 
 
@@ -15,7 +16,8 @@ import {SharedModule} from '../shared/shared.module'
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ]
 })
 export class ProductsModule { }
