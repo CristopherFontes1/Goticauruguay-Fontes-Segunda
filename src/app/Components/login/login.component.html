@@ -1,17 +1,31 @@
+<br>
+<h3>Login</h3>
 <div class="container">
-    <form>
-        <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [formControl]="emailField">
-        <p *ngIf="emailField.invalid">El correo no es correcto</p> 
-     
-        <!-- {{emailField.valid}},{{emailField.invalid}}-->
-        </div>
-        <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button  type="submit" class="btn btn-primary" [disabled]="emailField.invalid" (click)="sendMail()">Submit</button>
-        <!--<a [routerLink]="['./../listado/t', product.id]">Ver detalle</a>-->
-    </form>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailField" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailField.hasError('email') && !emailField.hasError('required')">
+        Porfavor ingrese un correo correcto. 
+      </mat-error>
+      <mat-error *ngIf="emailField.hasError('required')">
+        El correo es <strong>requerido</strong>
+      </mat-error>
+</mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+</form>
+<button  type="submit" mat-raised-button color="primary" [disabled]="emailField.invalid" (click)="sendMail()">Submit</button>
+<a mat-raised-button>Registrarse</a>
 </div>
+
+
+
+
+

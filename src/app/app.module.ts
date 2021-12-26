@@ -14,6 +14,7 @@ import {ProductsModule} from './Components/products/products.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminModule } from './Components/admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
+import {MaterialModule} from './Components/material/material.module'
 
 
 
@@ -37,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsModule,
     BrowserAnimationsModule,
     AdminModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+    
     
     
   ],

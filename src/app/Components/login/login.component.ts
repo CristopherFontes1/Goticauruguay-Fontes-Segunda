@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms'
+import {FormControl, Validators, NgForm, FormGroupDirective} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 
 @Component({
@@ -8,8 +9,11 @@ import {FormControl, Validators} from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 
+
+
 export class LoginComponent implements OnInit {
 
+  hide = true;
   emailField: FormControl;
 
   constructor() { 
@@ -17,7 +21,8 @@ export class LoginComponent implements OnInit {
     ('',[
     Validators.required, 
     Validators.minLength(4),
-    Validators.maxLength(20)
+    Validators.maxLength(20),
+    Validators.email
     
     ]);
   

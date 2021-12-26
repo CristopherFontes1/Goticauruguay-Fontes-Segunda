@@ -8,6 +8,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 
 
@@ -27,6 +29,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
+    MatSliderModule,
     
     
   ],
@@ -39,6 +42,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
+    MatSliderModule
   ]
 })
 export class MaterialModule { }
