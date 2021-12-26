@@ -1,10 +1,8 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
-import {ListadoComponent} from './Components/products/listado/listado.component';
 import { LoginComponent } from './Components/login/login.component';
 import { CarritoComponent } from './Components/carrito/carrito.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
-import { InfoComponent } from './Components/products/info/info.component'
 import { LayoutComponent } from './Components/layout/layout.component';
 import { AdminGuard } from './admin.guard';
 
@@ -40,7 +38,10 @@ const routes: Routes = [
       },
     ]
   },
- 
+  {
+    path: 'admin',
+    loadChildren: () => import ('./Components/admin/admin.module').then (m => m.AdminModule)
+  },
   {
     path: '**',
     component: PageNotFoundComponent

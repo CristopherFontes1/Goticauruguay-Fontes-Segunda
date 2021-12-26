@@ -1,6 +1,7 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Product } from '../../../products/listado/product.model';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({

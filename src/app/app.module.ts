@@ -11,7 +11,10 @@ import { LayoutComponent } from './Components/layout/layout.component';
 import {SharedModule} from './Components/shared/shared.module'
 import {CoreModule} from './Components/core/core.module'
 import {ProductsModule} from './Components/products/products.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AdminModule } from './Components/admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -32,7 +35,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CoreModule,
     ReactiveFormsModule,
     ProductsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AdminModule,
+    HttpClientModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
