@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from './product.model';
 import { ProductsService } from '../../core/services/products/products.service';
+import { CartService } from '../../core/services/cart/cart.service';
 
 @Component({
   selector: 'app-listado',
@@ -14,28 +15,27 @@ export class ListadoComponent implements  OnInit {
   @Output() productClicked: EventEmitter<any>;
   
   products: Product[] = [];
+  @Input() product: Product;
+
+    constructor(
+      private productsService: ProductsService,
+      private cartService: CartService,
+    ) { }
+
+    ngOnInit(): void {
+      this.fetchProducts();
+    }
   
 
- addCarrito() {
-    console.log('Añadir al carrito');
-
+    fetchProducts() {
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      this.products = products; 
+    })
   }
 
-  constructor(
-    private productsService: ProductsService,
-  ) { }
-
-  ngOnInit(): void {
-    this.fetchProducts();
+  addCart() {
+    console.log('añadir al carrito');
+    this.cartService.addCart(this.product);
   }
-
-  fetchProducts() {
-  this.productsService.getAllProducts()
-  .subscribe(products => {
-    this.products = products; 
-  })
-}
-
-
-
 }

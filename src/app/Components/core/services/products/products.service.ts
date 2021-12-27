@@ -21,6 +21,9 @@ export class ProductsService {
   }
 
   getProduct (id: string) {
-    return this.http.get<Product>(`${environment.url_api}${id}`);
+    return this.http.get<Product>(`${environment.url_api}/${id}`);
+  }
+  crateProduct (product: Product) {
+    return this.http.post(environment.url_api, product);
   }
 }

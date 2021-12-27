@@ -34,4 +34,19 @@ export class InfoComponent implements OnInit {
     })
   }
 
+  crateProduct () {
+    const newProduct: Product = { 
+      id: '222',
+      title: 'Hola Mundo',
+      price: 55,
+      description: 'Nuevo desde Angular',
+      image: '../../../../assets/Imagenes/1.png'
+  };
+    this.productsService.crateProduct(newProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+
+ }
+
 }

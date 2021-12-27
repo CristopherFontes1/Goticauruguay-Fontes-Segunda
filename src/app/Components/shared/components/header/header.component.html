@@ -7,7 +7,7 @@
         <a mat-button  routerLinkActive="active" routerLink="/login">Login</a>
     </nav>
  
-    <a mat-raised-button matBadge="4" matBadgeColor="warn" routerLinkActive="active" routerLink="/carrito">
+    <a mat-raised-button [matBadge]="total" matBadgeColor="warn" routerLinkActive="active" routerLink="/carrito">
       <mat-icon >shopping_cart</mat-icon>
       Carrito
     </a>
