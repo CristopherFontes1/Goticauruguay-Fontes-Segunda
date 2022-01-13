@@ -42,7 +42,8 @@ export class InfoComponent implements OnInit {
       description: 'Nuevo desde Angular',
       image: '../../../../assets/Imagenes/1.png'
   };
-    this.productsService.crateProduct(newProduct)
+    
+  this.productsService.crateProduct(newProduct)
     .subscribe(product => {
       console.log(product);
     });

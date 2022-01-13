@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url_api: 'https://my-json-server.typicode.com/CristopherFontes1/db.json/lista'
+  url_api: 'https://my-json-server.typicode.com/CristopherFontes1/db.json'
 };
 
 /*

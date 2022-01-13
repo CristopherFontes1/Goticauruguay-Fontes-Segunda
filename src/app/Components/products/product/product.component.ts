@@ -11,7 +11,6 @@ import {CartService} from '../../core/services/cart/cart.service'
 export class ProductComponent implements OnInit {
 
  // @Input() product: Product;
-  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   constructor(
     private cartService: CartService
@@ -20,10 +19,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addCart() {
-    console.log('añadir al carrito');
-  //  this.cartService.addCart(this.product);
-    // this.productClicked.emit(this.product.id);
-  }
+  
 
 }
