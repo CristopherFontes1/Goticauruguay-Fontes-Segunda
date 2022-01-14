@@ -6,12 +6,16 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent   {
+export class FooterComponent  implements OnInit {
 
   title = 'express';
   public test: string = '';
   constructor(private httpClient: HttpClient) { }
-  
+ 
+  ngOnInit() {
+      this.hacerTest()
+  }
+
   hacerTest() {
     this.httpClient.get('/api/test/').subscribe(
       (result: any) => {
